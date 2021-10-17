@@ -1,0 +1,48 @@
+.inputField {
+  width: 100%;
+  border: 3px solid #041631;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  height: 100%;
+  transition: 0.3s;
+  background-color: rgb(255, 255, 255);
+  color: #041631;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.inputField:focus {
+  border-color: #64ffda;
+  box-shadow: 0 0 8px 0 rgb(9, 119, 82);
+  border-radius: 5px;
+}
+
+.inputField::placeholder {
+  color: #5f656b;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.passwordField {
+  width: 100%;
+  border: 3px solid #041631;
+  padding: 0.8rem 1rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  outline: none;
+  height: 100%;
+  transition: 0.3s;
+  background-color: rgb(255, 255, 255);
+}
+
+.passwordField:focus {
+  border-color: #64ffda;
+  box-shadow: 0 0 8px 0 rgb(9, 119, 82);
+  border-radius: 5px;
+}
+.passwordField::placeholder {
+  font-weight: 600;
+  color: #5f656b;
+  letter-spacing: 0.5px;
+}
