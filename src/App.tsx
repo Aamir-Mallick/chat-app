@@ -9,6 +9,10 @@ const theme = createTheme({
     secondary: {
       main: "#64ffda",
     },
+    action: {
+      disabledBackground: "#b0cad0",
+      disabled: "#fff",
+    },
   },
 });
 

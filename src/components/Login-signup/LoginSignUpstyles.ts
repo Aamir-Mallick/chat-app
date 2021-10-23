@@ -19,31 +19,35 @@ export const useStyles = makeStyles((theme) => ({
   },
   inputFieldContainer: {
     marginRight: "1rem",
+    position: "relative",
     width: "250px",
     boxSizing: "border-box",
     [theme.breakpoints.down("sm")]: {
       marginTop: "1rem",
+      width: "320px",
     },
   },
   inputFieldContainerSigup: {
     marginTop: "1rem",
     width: "400px",
     boxSizing: "border-box",
-
+    position: "relative",
     [theme.breakpoints.down("sm")]: {
       marginTop: "1rem",
+      width: "320px",
     },
   },
   inputFieldContainerButton: {
     [theme.breakpoints.down("sm")]: {
-      width: "250px",
+      marginTop: "1rem",
+      width: "320px",
     },
   },
   inputFieldContainerButtonSignUp: {
     marginTop: "1rem",
     width: "400px",
     [theme.breakpoints.down("sm")]: {
-      width: "400px",
+      width: "320px",
     },
   },
   mainContainerSignup: {
@@ -59,6 +63,14 @@ export const useStyles = makeStyles((theme) => ({
       flexBasis: "100%",
     },
   },
+  typographyContent: {
+    margin: "4rem auto",
+    width: "500px",
+    textAlign: "center",
+    [theme.breakpoints.down("sm")]: {
+      width: "320px",
+    },
+  },
   signUpcontainer: {
     flexBasis: "50%",
     border: "1px solid black",
@@ -66,5 +78,13 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       flexBasis: "100%",
     },
+  },
+  errorMessage: {
+    fontSize: "10px",
+    position: "absolute",
+    top: "50px",
+    left: "0px",
+    padding: "2px 4px",
+    color: "red",
   },
 }));
