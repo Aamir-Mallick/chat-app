@@ -13,10 +13,17 @@ import "./login-signup-styles.css";
 import onlinemessaging from "../../images/online-messaging.svg";
 import * as regexAll from "../../Regx/RegxFile";
 // import {MessageIcons } from "@material-ui/icons"
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+
+// type signUpStatus = {
+//   setIsUserLoggedIn: React.Dispatch<React.SetStateAction<object>>;
+// };
 
 export const LoginSignUp = () => {
   const classes = useStyles();
 
+  // const { setIsUserLoggedIn } = props;
   const [isValidCredentails, setIsValidCredentails] = useState(false);
   const [isValidCredentailsSignUp, setIsValidCredentailsSignUp] =
     useState(false);
@@ -50,7 +57,7 @@ export const LoginSignUp = () => {
       setIsValidCredentails(false);
     }
   }, [isEmailLogin, isPasswordLogin]);
-  console.log(isValidCredentailsSignUp);
+
   useEffect(() => {
     if (isEmailSignUp.length > 0 || isPasswordSignup.length > 0) {
       if (
@@ -141,6 +148,18 @@ export const LoginSignUp = () => {
         });
         setIsPasswordSignUp(e.target.value);
       }
+    }
+  };
+
+  const handleSignUpWithEmail = async () => {
+    try {
+      const user = createUserWithEmailAndPassword(
+        auth,
+        isEmailSignUp,
+        isPasswordSignup
+      );
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -273,6 +292,7 @@ export const LoginSignUp = () => {
             </div>
             <div className={classes.inputFieldContainerButtonSignUp}>
               <Button
+                onClick={handleSignUpWithEmail}
                 fullWidth
                 variant="contained"
                 disabled={isValidCredentailsSignUp}
