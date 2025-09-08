@@ -19,7 +19,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import ChildCareIcon from "@material-ui/icons/ChildCare";
 import ScrollToBottom from "react-scroll-to-bottom";
 
-const socket = io("https://chat-app-server-aamir.herokuapp.com/");
+const socket = io("https://chat-server-beta-nine.vercel.app/");
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
